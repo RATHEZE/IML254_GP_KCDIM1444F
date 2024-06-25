@@ -1,0 +1,329 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Rates</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="resource/css/style3.css">
+    <style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 60%;
+}
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+tr:nth-child(even) {
+background-color: #dddddd;
+}
+.filter {
+display: flex;
+justify-content: center;
+margin: 10px 0;
+}
+.filter button {
+background-color: #2C4E80;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+font-size: 16px;
+}
+.important-notes {
+text-align: left;
+padding: 20px 20px;
+background-color: #EEEEEE;
+color: black;
+border: 1px solid #ddd;
+}
+main {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 20px;
+}
+
+.ticket-image img {
+width: 100%;
+}
+
+        .ticket-option {
+            display: flex;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+        }
+        .ticket-option img {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .info {
+            flex-grow: 1;
+        }
+        .info h2 {
+            margin: 0 0 10px 0;
+        }
+        .info p {
+            margin: 0 0 20px 0;
+        }
+        .price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price span {
+            font-size: 20px;
+            color: #333;
+        }
+        .price button {
+            background-color: #2C4E80;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .scroll-top {
+            background-color: #2C4E80;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .ticket-option img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        #ticketForm {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .form-content {
+            background-color: #2C4E80;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+        .form-content input, .form-content select {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="resource/image/merbok_land_logo.jpg" alt="Merbok Land Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Home
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownHome">
+                        <a class="dropdown-item" href="index.html">Home</a>
+                        <a class="dropdown-item" href="about_us.html">About Us</a>
+                        <a class="dropdown-item" href="contact_us.html">Contact Us</a>
+                        <a class="dropdown-item" href="org.html">Organizational Chart</a>
+                        <a class="dropdown-item" href="privacypolicy.html">Privacy Policy</a>
+                        <a class="dropdown-item" href="faq.html">FAQ</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownShopping" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shopping
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownShopping">
+                        <a class="dropdown-item" href="dining.html">Dining & Shopping</a>
+                        <a class="dropdown-item" href="souvenir.html">Souvenir</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownGuestService" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Guest Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGuestService">
+                        <a class="dropdown-item" href="guest_service.html">Guest Services</a>
+                        <a class="dropdown-item" href="rental.html">Rental</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rides_attraction.html">Rides & Attractions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rules_and_regulation.html">Park Rules and Regulations</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTicket" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ticket
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownTicket">
+                        <a class="dropdown-item" href="ticket.html">Ticket</a>
+                        <a class="dropdown-item" href="membership.html">Membership</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="promotion.html">Promotions</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<center>
+    <section class="ticket">
+        <div class="ticket-image">
+            <img src="resource/image/ticket.png" alt="ticket Image">
+        </div>
+    </section>
+    <br>
+    <table>
+        <tr>
+            <th>Admission</th>
+            <th>Rates(MYR)</th>
+        </tr>
+        <tr>
+            <td>Adult(13 years old and above)</td>
+            <td>RM250</td>
+        </tr>
+        <tr>
+            <td>Child(12 years old and above)</td>
+            <td>RM200</td>
+        </tr>
+        <tr>
+            <td>Senior Citizen(60 years old and above)</td>
+            <td>RM200</td>
+        </tr>
+    </table>
+</center>
+<br><br><br>
+<div class="container">
+    <div class="important-notes">
+        <h3>Important Note:</h3>
+        <ul>
+            <li>All tickets are valid only for the date and time specified at the time of purchase. Tickets are non-transferable and cannot be rescheduled.</li>
+            <li>Guests must present a valid ticket (either printed or digital) at the entrance. Photo ID may be required for verification.</li>
+            <li>Senior Citizen rates apply for age 60 and above - proof of age required.</li>
+            <li>Tickets are non-refundable and cannot be exchanged once purchased. In the event of park closure due to weather or unforeseen circumstances, guests will be offered an alternative date.</li>
+            <li>Appropriate swimwear is mandatory for all water attractions. For safety reasons, no loose clothing, accessories, or metal objects are allowed on rides.</li>
+            <li>Outside food and beverages, glass containers, and sharp objects are not permitted inside the park. Bags may be checked at the entrance.</li>
+            <li>Other terms & conditions apply.</li>
+        </ul>
+    </div>
+</div>
+<main>
+    <div class="ticket-option">
+        <img src="resource/image/adult.png" alt="SplashMania">
+        <div class="info">
+            <h2>Adult</h2>
+            <p>Some rides may have height restrictions and children's tickets might include access to kid-specific areas or rides.</p>
+            <div class="price">
+                <span>MYR 250.00</span>
+                <button onclick="showForm('Adult')">Buy Tickets</button>
+            </div>
+        </div>
+    </div>
+    <div class="ticket-option">
+        <img src="resource/image/child.png" alt="Splash Combo">
+        <div class="info">
+            <h2>Child</h2>
+            <p>Includes access to all rides, attractions and facilities in the waterpark.</p>
+            <div class="price">
+                <span>MYR 200.00</span>
+                <button onclick="showForm('Child')">Buy Tickets</button>
+            </div>
+        </div>
+    </div>
+    <div class="ticket-option">
+        <img src="resource/image/senior_citizen.png" alt="Splash Combo">
+        <div class="info">
+            <h2>Senior citizen</h2>
+            <p>There are special facilities or services for seniors such as shaded rest areas, gentle rides and changing rooms.</p>
+            <div class="price">
+                <span>MYR 200.00</span>
+                <button onclick="showForm('Senior citizen')">Buy Tickets</button>
+            </div>
+        </div>
+    </div>
+    <div id="ticketForm">
+        <div class="form-content">
+            <span class="close" onclick="closeForm()">&times;</span>
+            <h3>Buy Tickets</h3>
+            <form>
+                <input type="hidden" id="ticketType" name="ticketType">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script>
+    function showForm(ticketType) {
+        document.getElementById('ticketForm').style.display = 'block';
+        document.getElementById('ticketType').value = ticketType;
+    }
+
+    function closeForm() {
+        document.getElementById('ticketForm').style.display = 'none';
+    }
+</script>
+
+<footer> &copy; 2024 Theme Park. All rights reserved. </footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

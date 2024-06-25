@@ -1,0 +1,173 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rides & Attractions - Theme Park</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="resource/css/style3.css">
+    <style>
+        .attraction {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 1em;
+            overflow: hidden;
+            width: 30%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .attraction img {
+            width: 100%;
+            height: auto;
+        }
+
+        .info {
+            padding: 1em;
+        }
+
+        .info h2 {
+            margin-top: 0;
+        }
+
+        .more-button {
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .attractions-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="resource/image/merbok_land_logo.jpg" alt="Merbok Land Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Home
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownHome">
+                        <a class="dropdown-item" href="index.html">Home</a>
+                        <a class="dropdown-item" href="about_us.html">About Us</a>
+                        <a class="dropdown-item" href="contact_us.html">Contact Us</a>
+                        <a class="dropdown-item" href="org.html">Organizational Chart</a>
+                        <a class="dropdown-item" href="privacypolicy.html">Privacy Policy</a>
+                        <a class="dropdown-item" href="faq.html">FAQ</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownShopping" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shopping
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownShopping">
+                        <a class="dropdown-item" href="dining.html">Dining & Shopping</a>
+                        <a class="dropdown-item" href="souvenir.html">Souvenir</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownGuestService" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Guest Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGuestService">
+                        <a class="dropdown-item" href="guest_service.html">Guest Services</a>
+                        <a class="dropdown-item" href="rental.html">Rental</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rides_attraction.html">Rides & Attractions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rules_and_regulation.html">Park Rules and Regulations</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTicket" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ticket
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownTicket">
+                        <a class="dropdown-item" href="ticket.html">Ticket</a>
+                        <a class="dropdown-item" href="membership.html">Membership</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="promotion.html">Promotions</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<main>
+    <h2>Explore Our Thrilling Rides & Attractions</h2>
+    <p>Discover a world of excitement with our thrilling rides and captivating attractions. From heart-pounding roller coasters to immersive themed experiences, there's something for every thrill-seeker and family alike.</p>
+    
+    <div class="attractions-container">
+        <section class="attraction" id="merbok-coaster">
+            <img src="resource/image/splash_mania.jpg" alt="">
+            <div class="info">
+                <h2>Splash Mania</h2>
+                <p>Splash Mania is an exhilarating water attraction that promises endless fun for visitors of all ages. Dive into a world of excitement with wave pools, thrilling slides, and interactive water play areas.</p>
+                
+<br>
+                <a href="splash_mania.html" class="more-button">More</a>
+            </div>
+        </section>
+
+
+
+        <section class="attraction" id="merbok-express">
+            <img src="resource/image/merbok_express.jpg" alt="Merbok Express">
+            <div class="info">
+                <h2>Merbok Express</h2>
+                <p>The Merbok Express is a family-friendly ride that takes you on a scenic tour through beautiful landscapes and enchanting scenes.</p>
+                
+<br><br>
+                <a href="merbok_express.html" class="more-button">More</a>
+
+            </div>
+        </section>
+
+        <section class="attraction" id="merbok-mountain-flume">
+            <img src="resource/image/merbok_mountain_flume.jpg" alt="Merbok Mountain Flume">
+            <div class="info">
+                <h2>Merbok Mountain Flume</h2>
+                <p>The Merbok Mountain Flume offers an exciting water ride experience through a mountainous landscape with thrilling drops and splashes.</p>
+               
+
+                <a href="merbok_mountain_flume.html" class="more-button">More</a>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer> &copy; 2024 Theme Park. All rights reserved. </footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

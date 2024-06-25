@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #294B29;
+    color: #fff;
+    padding: 10px 50px; /* Adjust padding to make header smaller */
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #FFBF00;
+}
+
+h1, h2, h3, h4, h5, h6 {
+            color: #294B29; /* Font color */
+            font-weight: bold; /* Bold font */
+            font-size: 45px;
+        }
+/* Navbar styles */
+.navbar {
+    background-color: #294B29;
+    height: 80px;
+}
+
+.navbar-brand {
+    margin-right: 30px; /* Optional spacing between logo and text */
+    color: white; /* Color of the text next to the logo */
+}
+
+.navbar-brand img {
+    max-width: 150px; /* Adjust the maximum width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Optional spacing between logo and text */
+}
+
+.navbar-nav {
+    align-items: center; /* Align items vertically */
+}
+
+.navbar-nav .nav-link {
+    color: white !important; /* Color of the navbar links */
+    
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ddd !important; /* Hover color for navbar links */
+}
+
+.dropdown-menu {
+    background-color: #294B29; /* Dropdown menu background color */
+}
+
+.dropdown-item {
+    color: white !important; /* Color of dropdown items */
+}
+
+.dropdown-item:hover {
+    background-color: #3a5e3a !important; /* Background color of hovered dropdown items */
+    color: white !important; /* Text color of hovered dropdown items */
+}
+
+/* Main content styles */
+.main h1 {
+    color: #294B29;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 50px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #294B29;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

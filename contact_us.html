@@ -1,0 +1,261 @@
+<html>
+<head>
+<title> Contact Us </title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="resource/css/style3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+.top h1{
+    color: #294B29;
+    margin-left: 70px;
+}
+
+.container2 {
+    margin: auto;
+    width:80%;
+    border-radius: 6px;
+    padding: 20px 60px 40px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container2 .content {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.container2 .content .left-side {
+   width: 25%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-top: 15px;
+   position: relative;
+}
+
+.content .left-side::before {
+   content: '';
+   position: absolute;
+   height: 70%;
+   width: 2px;
+   right: -15px;
+   top: 50%;
+   transform: translateY(-50%);
+   background: black;
+}
+
+.content .left-side .details {
+   margin: 14px;
+   text-align: center;
+}
+.content .left-side .details .text-one {
+   color: #afafb6;
+   font-size: 14px;
+}
+
+.content .left-side .details i {
+   font-size: 30px;
+   color: ;
+   margin-bottom: 10px;
+}
+
+.content .left-side .details .topic {
+   font-size: 18px;
+   font-weight: 500;
+}
+
+.container2 .content .right-side {
+   width: 75%;
+   margin-left: 70px;
+}
+
+.content .right-side .topic {
+   font-size: 23px;
+   font-weight: 600;
+   color: black;
+}
+
+.right-side .input-box {
+   height: 50px;
+   width: 100%;
+   margin: 12px 0;
+}
+
+.right-side .input-box input, 
+.right-side .input-box textarea {
+   height: 100%;
+   width: 100%;
+   border: none;
+   font-size: 16px;
+   background: #F0F1F8;
+   border-radius: 6px;
+   padding: 0 15px;
+   resize: none;
+}
+
+.right-side .message-box {
+   min-height: 110px;
+   margin-top: 6px;
+}
+
+right-side .button {
+   display: inline-block;
+   margin-top: 12px;
+}
+
+.right-side .button input[type="submit"] {
+   color: #fff;
+   font-size: 18px;
+   outline: none;
+   border: none;
+   padding: 8px 16px;
+   border-radius: 6px;
+   background: #294B29;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.button input[type="submit"]: hover {
+   background: #5029bc;
+}
+
+@media (max-width: 950px) {
+   .container2 {
+    margin: auto;
+    width:90%;
+    padding: 30px 35px 40px 35px;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="resource/image/merbok_land_logo.jpg" alt="Merbok Land Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Home
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownHome">
+                        <a class="dropdown-item" href="index.html">Home</a>
+                        <a class="dropdown-item" href="about_us.html">About Us</a>
+                        <a class="dropdown-item" href="contact_us.html">Contact Us</a>
+                        <a class="dropdown-item" href="org.html">Organizational Chart</a>
+                        <a class="dropdown-item" href="privacypolicy.html">Privacy Policy</a>
+                        <a class="dropdown-item" href="faq.html">FAQ</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownShopping" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shopping
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownShopping">
+                        <a class="dropdown-item" href="dining.html">Dining & Shopping</a>
+                        <a class="dropdown-item" href="souvenir.html">Souvenir</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownGuestService" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Guest Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGuestService">
+                        <a class="dropdown-item" href="guest_service.html">Guest Services</a>
+                        <a class="dropdown-item" href="rental.html">Rental</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rides_attraction.html">Rides & Attractions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rules_and_regulation.html">Park Rules and Regulations</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTicket" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ticket
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownTicket">
+                        <a class="dropdown-item" href="ticket.html">Ticket</a>
+                        <a class="dropdown-item" href="membership.html">Membership</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="promotion.html">Promotions</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<div class="top">
+<h1> Contact Us </h1>
+</div>
+
+<div class="container2">
+ <div class="content">
+  <div class="left-side">
+   <div class="address details">
+   <i class="material-icons">location_on</i>
+    <div class="text-one">No. 1, Jalan Mangga, Bandar Merbok, 08400 Melbourne, Kedah.</div>
+   </div>
+   <div class="phone details">
+   <i class="material-icons">call</i>
+    <div class="text-one">+603 2004 0000</div>
+   </div>
+   <div class="email details">
+   <i class="material-icons">mail</i>
+    <div class="text-one">ask.merbokland@gmail.com</div>
+   </div>
+  </div>
+
+  <div class="right-side">
+   <div class="topic"> Send us a message </div>
+   <p>Got something on your mind? Send your comments or ask anything here. We will give our best to satisfy our customer needs!</p>
+  <form action="https://api.web3forms.com/submit" method="POST">
+   <input type="hidden" name="access_key" value="426d90db-20e0-43b9-a072-5c85f664b3e7">
+  
+   <div class="input-box">
+   <input type="text" name="name" placeholder="Enter your name">
+   </div>
+   <div class="input-box">
+   <input type="email" name="email" placeholder="Enter your email">
+   </div>
+   <div class="input-box message-box">
+   <textarea name="message" placeholder="Enter your message"></textarea>
+   </div>
+   <div class="button">
+   <input type="submit" value="Send">
+   </div>
+  </form>
+  </div>
+ </div>
+</div>
+
+<br><br><br><br><br>
+
+<footer> &copy; 2024 Theme Park. All rights reserved. </footer>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+</body>
+</html>

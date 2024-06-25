@@ -1,0 +1,257 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="resource/css/style3.css">
+    <style>
+        :root {
+            --main-font: sans-serif;
+            --main-margin: 0;
+            --main-padding: 0;
+        }
+
+        * {
+            margin: var(--main-margin);
+            padding: var(--main-padding);
+            font-family: var(--main-font);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+.rental-image img {
+width: 100%;
+}
+
+        .card {
+            height: 400px;
+            margin: 20px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0.3, 0.3);
+        }
+
+        .card button {
+            background-color: #2C4E80;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .cart-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #cart-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #cart-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #cart-list li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="resource/image/merbok_land_logo.jpg" alt="Merbok Land Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Home
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownHome">
+                        <a class="dropdown-item" href="index.html">Home</a>
+                        <a class="dropdown-item" href="about_us.html">About Us</a>
+                        <a class="dropdown-item" href="contact_us.html">Contact Us</a>
+                        <a class="dropdown-item" href="org.html">Organizational Chart</a>
+                        <a class="dropdown-item" href="privacypolicy.html">Privacy Policy</a>
+                        <a class="dropdown-item" href="faq.html">FAQ</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownShopping" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shopping
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownShopping">
+                        <a class="dropdown-item" href="dining.html">Dining & Shopping</a>
+                        <a class="dropdown-item" href="souvenir.html">Souvenir</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownGuestService" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Guest Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGuestService">
+                        <a class="dropdown-item" href="guest_service.html">Guest Services</a>
+                        <a class="dropdown-item" href="rental.html">Rental</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rides_attraction.html">Rides & Attractions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rules_and_regulation.html">Park Rules and Regulations</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTicket" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ticket
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownTicket">
+                        <a class="dropdown-item" href="ticket.html">Ticket</a>
+                        <a class="dropdown-item" href="membership.html">Membership</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="promotion.html">Promotions</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<center>
+    <main class="rental">
+        <div class="rental-image">
+            <img src="resource/image/rental.png" alt="Image of rental items">
+        </div>
+
+        <div class="cart-container">
+            <h2><i class="fa-solid fa-cart-shopping"></i> Cart</h2>
+            <ul id="cart-list"></ul>
+        </div>
+
+        <div class="container">
+            <article class="card">
+                <img src="resource/image/locker.jpg" alt="Image of a locker">
+                <div class="intro">
+                    <h3>Locker</h3>
+                    <p>Keep key or code confidential.</p>
+                    <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="resource/image/cabana.jpg" alt="Image of a cabana">
+                <div class="intro">
+                    <h3>Cabana</h3>
+                    <p>Maximum occupancy limits apply.</p>
+                    <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="resource/image/pelampung.jpg" alt="Image of a pelampung">
+                <div class="intro">
+                    <h3>  Pool Tube</h3>
+                    <p>   Fees may apply for lost or damaged tubes.</p>
+                    <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="resource/image/towel.jpg" alt="Image of a towel">
+                <div class="intro">
+                    <h3>Towel</h3>
+                    <p>Avoid staining towels with sunscreens or oils.</p>
+                    <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="resource/image/suitwonmen.jpg" alt="Image of a switsuit">
+                <div class="intro">
+                    <h3>Swimsuit</h3>
+                    <p>No exchange or return once taken from rental area.
+</p>
+                    <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="card">
+               <img src="resource/image/beachchair.jpg" alt="Image of a beach chair">
+                <div class="intro">
+                    <h3>Beach Chair</h3>
+                    <p>Fees for damage or loss of chairs may apply.
+</p>
+                    <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </article>
+        </div>
+    </main>
+</center>
+        <script>
+            // Get all "Add to Cart" buttons
+            const addToCartButtons = document.querySelectorAll('.card button');
+
+            // Get the cart list element
+            const cartList = document.getElementById('cart-list');
+
+            // Add event listeners to each "Add to Cart" button
+            addToCartButtons.forEach((button) => {
+                button.addEventListener('click', (e) => {
+                    // Get the parent card element
+                    const card = button.parentNode.parentNode;
+
+                    // Get the item name and price from the card
+                    const itemName = card.querySelector('h3').textContent;
+                    const itemPrice = 'MYR 25.00'; // Replace with actual price
+
+                    // Create a new list item for the cart
+                    const cartItem = document.createElement('li');
+                    cartItem.textContent = `${itemName} - ${itemPrice}`;
+
+                    // Add the item to the cart list
+                    cartList.appendChild(cartItem);
+                });
+            });
+        </script>
+
+
+<br><br><br><br><br>
+
+<footer> &copy; 2024 Theme Park. All rights reserved. </footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
